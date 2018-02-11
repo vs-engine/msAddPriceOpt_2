@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model package="msaddpticeopt" baseClass="xPDOObject" platform="mysql" defaultEngine="MyISAM" phpdoc-package="msaddpticeopt"
+       version="1.1">
+
+    <object class="msAddPticeOptItem" table="msaddpticeopt_items" extends="xPDOSimpleObject">
+        <field key="id_order" dbtype="int" precision="10" attributes="unsigned" phptype="integer" null="false"/>
+        <field key="num_order" dbtype="varchar" precision="20" phptype="string" null="true" default=""/>
+        <field key="order_options" dbtype="mediumtext" phptype="text" null="true" default=""/>
+        <field key="active" dbtype="tinyint" precision="1" phptype="boolean" null="true" default="1"/>
+
+        <index alias="id_order" name="id_order" primary="false" unique="false" type="BTREE">
+            <column key="id_order" length="" collation="A" null="false"/>
+        </index>
+        <index alias="num_order" name="num_order" primary="false" unique="false" type="BTREE">
+            <column key="num_order" length="" collation="A" null="false"/>
+        </index>
+        <index alias="active" name="active" primary="false" unique="false" type="BTREE">
+            <column key="active" length="" collation="A" null="false"/>
+        </index>
+
+        <aggregate alias="Order" class="msOrder" local="id_order" foreign="id" cardinality="one" owner="foreign"/>
+
+    </object>
+
+</model>
