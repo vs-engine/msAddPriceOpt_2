@@ -1,11 +1,11 @@
-## msAddPticeOpt
+## msAddPticeOpt v0.01
 vs1802max@gmail.com
 
 ## How to Export
 
 First, clone this repository somewhere on your development machine:
 
-`git clone https://github.com/vs-engine/msAddPriceOpt.git`
+`git clone https://github.com/vs-engine/msAddPriceOpt_2.git`
 
 ## Copyright Information
 
